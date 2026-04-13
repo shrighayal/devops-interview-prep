@@ -1,37 +1,96 @@
-# AWS Interview Questions & Answers
+🔹 General Questions
 
-## 🔹 General Questions
+1. What is AWS?
+AWS (Amazon Web Services) is a cloud platform that provides services like computing (EC2), storage (S3), databases (RDS), networking, etc.
 
-### 1. What is AWS?
-AWS (Amazon Web Services) is a cloud platform that provides on-demand computing services like servers, storage, and databases.
+2. What is EC2?
+EC2 (Elastic Compute Cloud) provides virtual servers in the cloud where you can run applications.
 
-### 2. What is EC2?
-EC2 (Elastic Compute Cloud) provides virtual servers in the cloud.
+3. EC2 vs S3 vs RDS
 
-### 3. Difference between EC2, S3, RDS?
-- EC2 → Virtual server
-- S3 → Storage
-- RDS → Managed database
+EC2 → Virtual machine
+S3 → Storage (objects/files)
+RDS → Managed database
 
-### 4. What is IAM?
-IAM is used to manage users, roles, and permissions securely.
+4. What is AMI?
+Amazon Machine Image is a template used to launch EC2 instances.
 
----
+5. Auto Scaling?
+Automatically increases/decreases instances based on traffic.
 
-## 🔹 Scenario-Based Questions
+6. Load Balancer?
+Distributes traffic across multiple servers.
 
-### 1. EC2 instance not reachable?
-- Check Security Group (port 22/80)
-- Check instance status
-- Verify key pair
-- Check NACL
+7. Public vs Private Subnet
 
-### 2. High traffic issue?
-- Enable Auto Scaling
-- Use Load Balancer
-- Use CloudWatch monitoring
+Public → Internet access
+Private → No direct internet
 
-### 3. AWS bill increased?
-- Check billing dashboard
-- Identify high-usage services
-- Stop unused resources
+8. IAM?
+Identity and Access Management for users, roles, permissions.
+
+9. VPC?
+Virtual Private Cloud = isolated network in AWS.
+
+10. Scaling types
+
+Vertical → increase size
+Horizontal → add instances
+
+🔹 Scenario-Based
+
+1. EC2 not reachable?
+Check:
+
+Security group (port 22/80 open)
+Instance running
+Network ACL
+Public IP
+
+2. Highly available architecture?
+Use:
+
+Multiple AZ
+Load balancer
+Auto scaling
+
+3. App slow?
+
+Scale instances
+Enable caching (CloudFront)
+Optimize DB
+
+4. Secure S3?
+
+Block public access
+Use IAM policies
+Enable encryption
+
+5. Instance crash?
+
+Use Auto Scaling
+Health checks
+
+6. Migration to AWS?
+
+Rehost (lift & shift)
+Replatform
+Refactor
+
+7. High bill?
+
+Check Cost Explorer
+Remove unused resources
+
+8. Secrets handling?
+
+AWS Secrets Manager
+Parameter Store
+
+9. CI/CD in AWS?
+
+CodePipeline + CodeBuild + CodeDeploy
+
+10. Monitoring?
+
+CloudWatch

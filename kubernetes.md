@@ -1,26 +1,77 @@
-# Kubernetes Interview Questions & Answers
+🔹 General
 
-## 🔹 General Questions
+1. Kubernetes?
+Container orchestration tool.
 
-### 1. What is Kubernetes?
-Kubernetes is a container orchestration tool.
+2. Pod?
+Smallest unit (container group).
 
-### 2. What is Pod?
-Smallest deployable unit.
+3. Deployment?
+Manages pods.
 
----
+4. Service?
+Exposes application.
 
-## 🔹 Scenario-Based Questions
+5. Types of service?
 
-### 1. Pod not starting?
-- kubectl describe pod
-- kubectl logs
-- Check YAML
+ClusterIP
+NodePort
+LoadBalancer
 
-### 2. App not accessible?
-- Check service type
-- Verify ports
-- Check ingress
+6. ConfigMap?
+Stores config data.
 
-### 3. Rollback deployment?
-kubectl rollout undo deployment <name>
+7. Secret?
+Stores sensitive data.
+
+8. Ingress?
+HTTP routing.
+
+9. Helm?
+Package manager.
+
+10. Autoscaling?
+HPA scales pods.
+
+🔹 Scenario
+
+1. Pod not starting?
+
+kubectl describe
+Check logs
+
+2. App down?
+
+Check pods/services
+
+3. Rolling update?
+
+kubectl apply
+
+4. Rollback?
+
+kubectl rollout undo
+
+5. Scale app?
+
+kubectl scale
+
+6. Pod not accessible?
+
+Check service
+
+7. Secure secrets?
+
+Use Kubernetes secrets
+
+8. Monitor cluster?
+
+Prometheus + Grafana
+
+9. Node down?
+
+Pods rescheduled
+
+10. HA cluster?
+
+Multiple master nodes
